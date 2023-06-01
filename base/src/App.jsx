@@ -1,14 +1,12 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
 
 function App() {
   const [img, SetImg] = useState();
   const [images, setImages] = useState([]);
   function handleNewWindows() {
+    console.log(import.meta.env.URL_WINDOWS);
     window.open(
-      "http://localhost:5173",
+      import.meta.env.VITE_URL_WINDOWS,
       "Scanner",
       "toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=1,width=900,height=900,left = 390,top = 50"
     );
